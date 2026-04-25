@@ -1,0 +1,84 @@
+# =========================
+# Python Cache
+# =========================
+__pycache__/
+*.py[cod]
+*.pyo
+
+# =========================
+# Virtual Environment (VERY IMPORTANT)
+# =========================
+venv/
+
+# =========================
+# OS Files
+# =========================
+.DS_Store
+Thumbs.db
+
+# =========================
+# Logs
+# =========================
+*.log
+
+# =========================
+# Environment Variables
+# =========================
+.env
+
+# =========================
+# Uploads (you have this folder)
+# =========================
+backend/uploads/
+
+# =========================
+# Generated Audio Files (MusicGen output)
+# =========================
+*.wav
+*.mp3
+*.flac
+
+# =========================
+# Model Weights (VERY IMPORTANT)
+# =========================
+*.pt
+*.pth
+*.h5
+*.ckpt
+*.pb
+
+# =========================
+# HuggingFace + Torch Cache
+# =========================
+.cache/
+.cache/huggingface/
+.cache/torch/
+
+# =========================
+# TensorFlow Hub Cache (IMPORTANT for your YAMNet issue)
+# =========================
+tfhub_modules/
+
+# =========================
+# Temporary Files
+# =========================
+tmp/
+temp/
+
+# =========================
+# VS Code
+# =========================
+.vscode/
+
+# =========================
+# Build / Dist
+# =========================
+build/
+dist/
+*.egg-info/
+
+# =========================
+# Database (if you add later)
+# =========================
+*.db
+*.sqlite3
