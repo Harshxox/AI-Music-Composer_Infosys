@@ -65,11 +65,11 @@ AI-Music-Generation-System_Infosys/
 ### 1.Login Page
 ![alt text](Project_screenshots/Login_Page.png)
 ### 2.Music Generation UI
-![alt text](Project_screenshots/Music_Generation.png)
+![alt text](Project_screenshots/Music_Generation.jpeg)
 ### 3. Music Library
-![alt text](Project_screenshots/Music_Library.png)
+![alt text](Project_screenshots/Music_Library.jpeg)
 ### 4. Genre Classification
-![alt text](Project_screenshots/Genre_Classification.png)
+![alt text](Project_screenshots/Genre_Classification.jpeg)
 
 
 
