@@ -61,10 +61,16 @@ AI-Music-Generation-System_Infosys/
 ```
 
 ## Project Screenshots
-![alt text](image.png)
+
 ### 1.Login Page
-![alt text](image.png)
+![alt text](Project_screenshots/Login_Page.png)
 ### 2.Music Generation UI
+![alt text](Project_screenshots/Music_Generation.png)
+### 3. Music Library
+![alt text](Project_screenshots/Music_Library.png)
+### 4. Genre Classification
+![alt text](Project_screenshots/Genre_Classification.png)
+
 
 
 Follow these steps to run the project locally:
@@ -74,93 +80,68 @@ Follow these steps to run the project locally:
 - Python 3.8+
 - Node.js 16+
 - npm
+- pip
+- Git
 
-### 1. Backend Setup
+### Step 1: Clone Repository
 
 ```bash
-# Navigate to backend directory
-cd backend
+git clone https://github.com/your-username/musicgen-project.git
+cd musicgen-project
 
-# Create virtual environment (optional but recommended)
+### Step 2: Create Virtual Environment
+```bash
 python -m venv venv
-
-# Activate virtual environment
-# Windows:
 venv\Scripts\activate
-# macOS/Linux:
-source venv/bin/activate
+```
 
-# Install dependencies
-pip install -r requirements.txt
+### Step 3: Install Dependencies
+```bash
+pip install --upgrade pip
+pip install flask flask-cors fastapi uvicorn
+pip install torch torchaudio audiocraft
+pip install tensorflow tensorflow-hub
+pip install librosa soundfile numpy scikit-learn matplotlib
+pip install transformers sentencepiece
+```
 
-# Run the Flask server
+# Running the Project
+### 1. Start Genre Classification Server (Flask)
+```bash
+cd backend
 python app.py
 ```
+Runs on0: http://127.0.0.1:5000
 
-The backend API will start at: http://localhost:5000
-
-### 2. Frontend Setup
-
+### 2. Start Music Generation Server (FastAPI)
+Open new terminal:
 ```bash
-# Navigate to frontend directory
-cd frontend
-
-# Install dependencies
-npm install
-
-# Start the development server
-npm start
+cd project-root
+venv\Scripts\activate
+python -m uvicorn server:app --host 127.0.0.1 --port 8000 --reload
 ```
+Runs on: http://127.0.0.1:8000
+API Docs: http://127.0.0.1:8000/docs
 
-The frontend application will start at: http://localhost:3000
-
-## How to Use
-
-### Music Generation
-
-1. Open http://localhost:3000 in your browser
-2. Go to the "Music Composer" tab
-3. Enter a text prompt describing the music you want (e.g., "calm relaxing piano music for study", "upbeat energetic electronic dance track", "epic orchestral cinematic music")
-4. Click "Generate Music"
-5. Wait for the AI to process your request (this may take 30-60 seconds depending on your system)
-6. Once generated, the track will appear in the list below with playback controls
-
-### Audio Classification
-
-1. Go to the "Genre Classifier" tab
-2. Click "Choose File" and select an audio file (MP3, WAV, FLAC, etc.)
-3. Click "Classify Genre"
-4. The system will analyze the audio and display the predicted genre with confidence level
-
-## Project Status
-
-- ✅ **Backend API**: Functional with MusicGen integration
-- ✅ **Frontend UI**: Complete with all features
-- ✅ **Genre Classifier**: Working with TensorFlow/Keras
-- ✅ **Full Integration**: Backend and frontend connected
-- ✅ **User Authentication**: Email/password registration and login
-- ✅ **Responsive Design**: Works on desktop and mobile
-
-## Next Steps (Optional Enhancements)
-
-1. Add more advanced AI models (e.g., MusicGen 2, Riffusion)
-2. Implement streaming audio playback for long tracks
-3. Add user accounts and music library management
-4. Deploy to cloud platforms (Heroku, AWS, or Azure)
-5. Add BPM and key detection
-6. Implement music visualization effects
-7. Create a mobile app version using React Native
-
-## Important Notes
-
-- **Model Downloads**: The MusicGen model will be downloaded automatically on first run (large file, ~2GB)
-- **Performance**: Music generation requires significant CPU/GPU resources. On slower systems, generation may take 1-2 minutes.
-- **Compatibility**: This project was developed and tested on Windows 10/11. Minor adjustments may be needed for macOS or Linux.
-- **Dependencies**: Ensure you have Python 3.8+ and Node.js 16+ installed before running the project.
-
-## Contact Information
-
-For questions or collaboration opportunities:
-
-- **Email**: [EMAIL_ADDRESS]
-- **GitHub**: [Your GitHub Profile Link]
+### 3. Run Frontend
+Open
+```bash
+index.html
+```
+OR run using Live Server (VS Code)
+### API Endpoints
+Generate Music
+```bash
+POST /generate
+```
+Body:
+```bash
+{
+  "prompt": "lofi chill piano",
+  "duration": 5
+}
+```
+Classify Audio
+```bash
+POST /classify
+```
