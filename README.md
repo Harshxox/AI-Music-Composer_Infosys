@@ -145,3 +145,20 @@ Classify Audio
 ```bash
 POST /classify
 ```
+## Future Scope
+☁️ Cloud deployment (AWS / GCP)
+🎚️ Real-time audio editing tools
+👥 Multi-user collaboration
+🎧 Spotify / SoundCloud integration
+
+## Acknowledgements
+Infosys Springboard
+Meta AI (MusicGen)
+TensorFlow Hub (YAMNet)
+Hugging Face
+
+## Author
+
+Harshdeep Sharma
+B.Tech CSE (AI/ML)
+AI Developer | Builder | Innovator
